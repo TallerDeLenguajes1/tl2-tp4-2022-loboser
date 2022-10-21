@@ -2,7 +2,7 @@
 
 
 @{
-    ViewData["Title"] = "AltaPedido";
+    ViewData["Title"] = "Alta Pedido";
 }
 
 
@@ -10,14 +10,14 @@
 
 <form onsubmit="alert('Formulario Enviado!')" asp-action="AltaPedido" method="post">
     <label asp-for="Obs">Observación
-    <input asp-for="Obs"/></label>
+    <input asp-for="Obs"/></label><br>
     <label asp-for="Cliente.Telefono">Telefono
-    <input asp-for="Cliente.Telefono"></label>
+    <input asp-for="Cliente.Telefono"></label><br>
     <label asp-for="Cliente.Nombre">Nombre
-    <input asp-for="Cliente.Nombre"></label>
+    <input asp-for="Cliente.Nombre"></label><br>
     <label asp-for="Cliente.Direccion">Direccion
-    <input asp-for="Cliente.Direccion"></label>
+    <input asp-for="Cliente.Direccion"></label><br>
     <label asp-for="Cliente.DatosReferenciaDireccion">Datos de Referencia (Direccion)
-    <input asp-for="Cliente.DatosReferenciaDireccion"></label>
+    <input asp-for="Cliente.DatosReferenciaDireccion"></label><br>
     <button type="submit">Enviar</button>
 </form>

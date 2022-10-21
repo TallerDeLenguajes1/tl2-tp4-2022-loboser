@@ -51,8 +51,8 @@ namespace tl2_tp4_2022_loboser.Controllers
         static List<Cadete> CargarCadetes(){
             List<Cadete> Cadetes = new List<Cadete>();
 
-            if(System.IO.File.Exists("../Datos.csv") && new FileInfo("../Datos.csv").Length > 0){
-                string[] lineas = System.IO.File.ReadAllLines("../Datos.csv");
+            if(System.IO.File.Exists("Datos.csv") && new FileInfo("Datos.csv").Length > 0){
+                string[] lineas = System.IO.File.ReadAllLines("Datos.csv");
 
                 foreach (var linea in lineas)
                 {
