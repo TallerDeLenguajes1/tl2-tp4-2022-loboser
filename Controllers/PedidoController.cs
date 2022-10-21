@@ -44,7 +44,7 @@ namespace tl2_tp4_2022_loboser.Controllers
             
             Pedidos.Add(Pedido);
 
-            return View();
+            return RedirectToAction("AltaPedido");
         }
 
         [HttpGet]
