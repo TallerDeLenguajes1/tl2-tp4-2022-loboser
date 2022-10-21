@@ -17,9 +17,11 @@ namespace tl2_tp4_2022_loboser.Controllers
         {
             _logger = logger;
         }
-        List<Pedido> Pedidos = new List<Pedido>();
-        int nroPedidos = 1;
-        int idCliente = 1;
+
+        static List<Pedido> Pedidos = new List<Pedido>();
+        static int nroPedidos = 1;
+        static int idCliente = 1;
+        
         public IActionResult Index()
         {
             return View();
@@ -42,18 +44,20 @@ namespace tl2_tp4_2022_loboser.Controllers
             
             Pedidos.Add(Pedido);
 
-            return RedirectToAction("AltaPedido");
+            return View();
         }
+
         [HttpGet]
         public IActionResult BajaPedido()
         {
             return View(Pedidos);
         }
+
         [HttpPost]
         public IActionResult BajaPedido(int nro)
         {
             Pedidos = Pedidos.Where(t => t.Nro != nro).ToList();
-            return View();
+            return RedirectToAction("BajaPedido");
         }
 
             [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
